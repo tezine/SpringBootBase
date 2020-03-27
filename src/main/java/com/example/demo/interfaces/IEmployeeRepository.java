@@ -9,10 +9,7 @@ import com.example.demo.models.Employee;
 import com.github.fge.jsonpatch.JsonPatch;
 import java.util.List;
 
-/**
- *
- * @author TEB8CA
- */
+
 public interface IEmployeeRepository {
     public long getNextID();
     public List<Employee> getAll();
