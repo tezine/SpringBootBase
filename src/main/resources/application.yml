@@ -1,0 +1,31 @@
+spring:
+    profiles: test
+name: test-YAML
+environment: test
+servers: 
+    - www.abc.test.com
+    - www.xyz.test.com
+datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/teste
+    username: root
+    password: netjer    
+ 
+---
+
+spring:
+    profiles: prod
+name: prod-YAML
+environment: production
+datasource:
+    driverClassName: org.h2.Driver
+    url: jdbc:h2:mem:test
+    username: SA
+    password: 
+#    driverClassName: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://localhost:3306/teste
+#    username: root
+#    password: suasenha    
+servers: 
+    - www.abc.com
+    - www.xyz.com
